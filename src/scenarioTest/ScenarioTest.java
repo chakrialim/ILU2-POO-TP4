@@ -1,6 +1,11 @@
 package scenarioTest;
 
+import Produit.Poisson;
+import Produit.Produit;
+import Produit.Sanglier;
+import personnages.Gaulois;
 import villagegaulois.Etal;
+import villagegaulois.IEtal;
 
 public class ScenarioTest {
 
@@ -31,7 +36,19 @@ public class ScenarioTest {
 	}
 
 	public static void main(String[] args) {
-
+//		IEtals[] marche = new IEtals[3];
+//		IEtals<Sanglier> etalSanglier = new Etal<>();
+//		IEtals<Poisson> etalPoisson = new Etal<>();
+//		marche[0] = etalSanglier;
+//		marche[1] = etalPoisson;
+//		IEtal<Sanglier>[] marche = new IEtal[3];
+//		Etal<Sanglier> etalSanglier = new Etal<>();
+//		marche[0] = etalSanglier;
+		IEtal[] etals = new IEtal[3];
+		Etal<Sanglier> etalSanglier = new Etal<>();
+		etals[0] = etalSanglier;
+		etals[0].occuperEtal(new Gaulois("Ordralfabétix", 12), new Poisson("lundi"), 10);  
+		
 	}
 
 }
